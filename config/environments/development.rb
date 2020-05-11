@@ -60,15 +60,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   #config.action_mailer.delivery_method = :letter_opener
-  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.perform_deliveries = true
 
-  ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['SENDGRID_LOGIN'],
-  :password => ENV['SENDGRID_PWD'],
-  :domain => 'no-reply@monsite.fr',
-  :address => 'smtp.sendgrid.net',
-  :port => 587,
-  :authentication => :plain,
-  :enable_starttls_auto => true
-  }
+
 end
