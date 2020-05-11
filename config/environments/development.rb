@@ -60,7 +60,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   #config.action_mailer.delivery_method = :letter_opener
-  #config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_deliveries = true
 
   ActionMailer::Base.smtp_settings = {
   :user_name => ENV['SENDGRID_LOGIN'],
